@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RitikaTestModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="Patient_ID" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="30" />
+    <Property Name="Patient_ID" Type="int" Nullable="false" />
+    <Property Name="age" Type="int" />
+    <Property Name="department" Type="varchar" MaxLength="50" />
+    <Property Name="gender" Type="varchar" MaxLength="10" />
+    <Property Name="dateTime" Type="date" />
+    <Property Name="Insurance_No" Type="int" />
+  </EntityType>
+  <EntityType Name="Insurance">
+    <Key>
+      <PropertyRef Name="Patient_ID" />
+    </Key>
+    <Property Name="Patient_ID" Type="int" Nullable="false" />
+    <Property Name="Insurance_Company" Type="varchar" MaxLength="10" />
+    <Property Name="Insurance_No" Type="int" />
+    <Property Name="Co_Pay_Amount" Type="int" />
+    <Property Name="Total_Amount" Type="int" />
+  </EntityType>
+  <EntityType Name="tracking">
+    <Key>
+      <PropertyRef Name="Patient_ID" />
+    </Key>
+    <Property Name="Patient_ID" Type="int" Nullable="false" />
+    <Property Name="doctor_visited" Type="varchar" MaxLength="5" />
+    <Property Name="payment_paid" Type="varchar" MaxLength="5" />
+    <Property Name="appointment_booked" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityContainer Name="RitikaTestModel1StoreContainer">
+    <EntitySet Name="Appointment" EntityType="Self.Appointment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Insurance" EntityType="Self.Insurance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tracking" EntityType="Self.tracking" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

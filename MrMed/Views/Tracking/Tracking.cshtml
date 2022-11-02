@@ -1,0 +1,42 @@
+﻿@model MrMed.tracking
+
+@{
+    ViewBag.Title = "Tracking";
+}
+
+<h2>Tracking</h2>
+
+<div>
+    <h4>tracking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.doctor_visited)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doctor_visited)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.payment_paid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.payment_paid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appointment_booked)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appointment_booked)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Patient_ID }) |
+    @Html.ActionLink("Back to List", "Tracking")
+</p>

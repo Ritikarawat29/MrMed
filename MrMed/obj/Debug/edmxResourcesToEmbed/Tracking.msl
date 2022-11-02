@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RitikaTestModel1StoreContainer" CdmEntityContainer="RitikaTestEntities1">
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="RitikaTestModel1.Appointment">
+        <MappingFragment StoreEntitySet="Appointment">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="department" ColumnName="department" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+          <ScalarProperty Name="Insurance_No" ColumnName="Insurance_No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Insurances">
+      <EntityTypeMapping TypeName="RitikaTestModel1.Insurance">
+        <MappingFragment StoreEntitySet="Insurance">
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="Insurance_Company" ColumnName="Insurance_Company" />
+          <ScalarProperty Name="Insurance_No" ColumnName="Insurance_No" />
+          <ScalarProperty Name="Co_Pay_Amount" ColumnName="Co_Pay_Amount" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total_Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trackings">
+      <EntityTypeMapping TypeName="RitikaTestModel1.tracking">
+        <MappingFragment StoreEntitySet="tracking">
+          <ScalarProperty Name="Patient_ID" ColumnName="Patient_ID" />
+          <ScalarProperty Name="doctor_visited" ColumnName="doctor_visited" />
+          <ScalarProperty Name="payment_paid" ColumnName="payment_paid" />
+          <ScalarProperty Name="appointment_booked" ColumnName="appointment_booked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

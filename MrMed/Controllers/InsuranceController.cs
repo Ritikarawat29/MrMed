@@ -6,16 +6,16 @@ using System.Web.Mvc;
 
 namespace MrMed.Controllers
 {
-    public class AppointmentController : Controller
+    public class InsuranceController : Controller
     {
-        // GET: Appointment
-        public ActionResult Appointment()
+        // GET: Insurance
+        public ActionResult Insurance()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Appointment(Appointment obj)
+        public ActionResult Insurance(Insurance obj)
 
 
 
@@ -23,11 +23,12 @@ namespace MrMed.Controllers
             if (ModelState.IsValid)
             {
                 RitikaTestEntities1 db = new RitikaTestEntities1();
-                db.Appointments.Add(obj);
-             
+                db.Insurances.Add(obj);
+
                 db.SaveChanges();
             }
             return View(obj);
         }
+
     }
 }

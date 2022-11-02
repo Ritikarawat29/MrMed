@@ -6,16 +6,16 @@ using System.Web.Mvc;
 
 namespace MrMed.Controllers
 {
-    public class AppointmentController : Controller
+    public class TrackingController : Controller
     {
-        // GET: Appointment
-        public ActionResult Appointment()
+        // GET: Tracking
+        public ActionResult Tracking()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Appointment(Appointment obj)
+        public ActionResult Tracking(tracking obj)
 
 
 
@@ -23,8 +23,8 @@ namespace MrMed.Controllers
             if (ModelState.IsValid)
             {
                 RitikaTestEntities1 db = new RitikaTestEntities1();
-                db.Appointments.Add(obj);
-             
+                db.trackings.Add(obj);
+
                 db.SaveChanges();
             }
             return View(obj);

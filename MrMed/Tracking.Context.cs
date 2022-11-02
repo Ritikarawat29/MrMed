@@ -13,10 +13,10 @@ namespace MrMed
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RitikaTestEntities : DbContext
+    public partial class RitikaTestEntities1 : DbContext
     {
-        public RitikaTestEntities()
-            : base("name=RitikaTestEntities")
+        public RitikaTestEntities1()
+            : base("name=RitikaTestEntities1")
         {
         }
     
@@ -26,5 +26,7 @@ namespace MrMed
         }
     
         public virtual DbSet<Appointment> Appointments { get; set; }
+        public virtual DbSet<Insurance> Insurances { get; set; }
+        public virtual DbSet<tracking> trackings { get; set; }
     }
 }
